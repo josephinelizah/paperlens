@@ -11,6 +11,9 @@ type Analysis = {
   conclusion: string;
 };
 
+const API_URL =
+  import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
+
 function App() {
   const [file, setFile] = useState<File | null>(null);
   const [message, setMessage] = useState("");
@@ -65,7 +68,7 @@ function App() {
 
     try {
       const response = await fetch(
-        "http://127.0.0.1:8000/api/papers/upload",
+        `${API_URL}/api/papers/upload`,
         {
           method: "POST",
           body: formData,
