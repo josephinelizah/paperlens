@@ -1,6 +1,9 @@
 import { useState } from "react";
 import "./App.css";
 
+const API_URL =
+  import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
+
 type Analysis = {
   title: string;
   abstract: string;
@@ -10,9 +13,6 @@ type Analysis = {
   results: string;
   conclusion: string;
 };
-
-const API_URL =
-  import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
 
 function App() {
   const [file, setFile] = useState<File | null>(null);
