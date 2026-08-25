@@ -2,6 +2,10 @@
 
 PaperLens is a research paper assistant that helps users understand academic papers faster by extracting key ideas, methodology, results, and overall meaning.
 
+## Live Demo
+
+https://paperlens-olive.vercel.app
+
 ## Features
 
 - Upload research papers as PDFs
